@@ -1,1 +1,48 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="led_select" id="9" inline="true" x="114" y="43">
+    <field name="ACTION">ON</field>
+    <value name="LED">
+      <block type="math_number" id="16">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="robot_delay" id="18" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="25">
+            <field name="NUM">1000</field>
+          </block>
+        </value>
+        <next>
+          <block type="led_select" id="35" inline="true">
+            <field name="ACTION">OFF</field>
+            <value name="LED">
+              <block type="math_number" id="51">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="robot_delay" id="37" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="44">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="led_select" id="60" inline="true">
+                    <field name="ACTION">FLASH</field>
+                    <value name="LED">
+                      <block type="math_number" id="67">
+                        <field name="NUM">5</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
